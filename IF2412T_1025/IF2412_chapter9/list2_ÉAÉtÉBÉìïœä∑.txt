@@ -1,0 +1,32 @@
+import cv2
+import numpy as np
+
+# 画像読み込み
+src = cv2.imread('src.bmp', 0)
+# 出力画像
+dst = np.zeros_like(src)
+
+# 移動ベクトル
+# 拡大
+mv0 = np.array([64, 64])
+mv1 = np.array([64, -64])
+mv2 = np.array([-64, 64])
+
+# 変形
+# mv0 = np.array([32, 0])
+# mv1 = np.array([0, -32])
+# mv2 = np.array([0, 32])
+
+# Affine変換
+W = 256
+H = 256
+for y in range(H):
+  for x in range(W):
+# +0.5は四捨五入のための項
+    mv = (mv1 - mv0) * x / W + (mv2 - mv0) * y / H + mv0 + 0.5
+    mv_int = mv.astype(np.int16)
+    dst[y, x] = src[np.clip(y + mv_int[0], 0, 255), 
+np.clip(x +mv_int[1], 0, 255)]
+
+# 画像出力
+cv2.imwrite('dst.bmp', dst)

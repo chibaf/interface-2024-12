@@ -1,0 +1,35 @@
+import cv2
+import numpy as np
+
+# 画像読み込み
+src = cv2.imread('src.bmp', 0)
+H, W = src.shape
+
+# 出力画像
+N = 8
+dst = np.zeros((H, W), dtype=np.float32)
+
+# DCT-II
+# 小ブロックでループ
+for j in range(0, H, N):
+  for i in range(0, W, N):
+# 波数でループ
+    for v in range(N):
+      for u in range(N):
+# x, y座標でループ
+        for y in range(N):
+          for x in range(N):
+            cu = 1
+            cv = 1
+            if u == 0:
+              cu /= np.sqrt(2)
+            if v == 0:
+              cv /= np.sqrt(2)
+            dst[v + j, u + i] += src[y + j, x + i] * ((2 * cu * cv / N) *
+np.cos((2*x + 1) * u * np.pi / (2 * N)) *
+ np.cos((2 * y + 1) * v * np.pi / (2 * N)))
+
+# 結果を保存
+cv2.imwrite('dst.bmp', 
+(np.abs(dst) * 256 / np.max(np.abs(dst)))[128:128+N, 128:128+N])
+

@@ -1,0 +1,3 @@
+>>> I = np.eye(2)  # 2×2の単位行列
+>>> np.allclose(A @ Ainv, I)
+True
