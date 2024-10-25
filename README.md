@@ -5,7 +5,15 @@ Pythonで動かして学ぶ線形代数
 </pre>
 
 interface-2024-12 source codes and data
+
+
+https://interface.cqpub.co.jp/gowin_vol4/
   
 ## 2024年12月号別冊付録　GOWIN Vol.4サポートページ
 
-https://interface.cqpub.co.jp/gowin_vol4/
+Tang Primer 25K
+
+sipeed/TangPrimer-25K-example: TangPrimer-25K-example project
+
+https://github.com/sipeed/TangPrimer-25K-example
+
