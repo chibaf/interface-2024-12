@@ -8,6 +8,11 @@ interface-2024-12 source codes and data
 
 
 https://interface.cqpub.co.jp/gowin_vol4/
+
+
+## Interface2024年12月号「地理情報システム」サポートページ ｜ Interface – CQ出版
+
+https://interface.cqpub.co.jp/202412_gis/
   
 ## 2024年12月号別冊付録　GOWIN Vol.4サポートページ
 
