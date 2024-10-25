@@ -4,6 +4,12 @@ Interface 2024年12月号 LLM/姿勢推定/信号処理/GPS<br>
 Pythonで動かして学ぶ線形代数
 </pre>
 
+Interface 2024年 ダウンロード・データ
+
+12月号　Pythonで動かして学ぶ線形代数[LLM/姿勢推定/信号処理/GPS] 　
+
+https://www.cqpub.co.jp/interface/download/contents2024.htm
+
 interface-2024-12 source codes and data
 
 
