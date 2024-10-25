@@ -1,0 +1,23 @@
+IO_PORT "clk" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;
+IO_LOC "clk" E2;
+IO_PORT "err" PULL_MODE=NONE DRIVE=8   BANK_VCCIO=3.3;
+IO_LOC "err" D7;
+
+IO_PORT "s"   PULL_MODE=NONE DRIVE=8   BANK_VCCIO=3.3;
+IO_PORT "txd" PULL_MODE=NONE DRIVE=8   BANK_VCCIO=3.3;
+IO_PORT "rxd" PULL_MODE=NONE DRIVE=OFF BANK_VCCIO=3.3;
+
+# When use PMOD_A
+IO_LOC "s"   G8;
+IO_LOC "txd" H7;
+IO_LOC "rxd" J5;
+
+# When use PMOD_B
+# IO_LOC "s"   E10;
+# IO_LOC "txd" L11;
+# IO_LOC "rxd" K5;
+
+# When use PMOD_C
+# IO_LOC "s"   D10;
+# IO_LOC "txd" B10;
+# IO_LOC "rxd" C10;
